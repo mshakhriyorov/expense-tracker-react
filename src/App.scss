@@ -1,0 +1,133 @@
+$color: rgb(219, 214, 214);
+
+body {
+    background-color: $color;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+
+    h1, h4{
+        margin: 0;
+    }
+
+    h2 {
+        color: blue;
+        text-align: center;
+    }
+
+    .container {
+        width: 400px;
+        background-color: grey;
+        padding: 20px;
+        border-radius: 10px;
+
+        .inc-exp-container {
+            display: flex;
+            margin: 30px auto;
+            width: 100%;
+
+            div{
+                background-color: rgb(233, 227, 220);
+                padding: 10px;
+                box-shadow: 0 0 4px 0 black;
+                transition: .3s;
+                width: 100%;
+
+                &:hover{
+                    box-shadow: 0 0 1px 0 black;
+                }
+            }
+            div:first-child p{
+                color: green;
+            }
+            div:last-child p{
+                color: red;
+            }
+        }
+
+        .list {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+
+            li{
+                list-style: none;
+                padding: 5px;
+                display: flex;
+                justify-content: space-between;
+                background-color: darkgray;
+                border-bottom: 1px solid grey;
+                margin-bottom: 5px;
+                box-shadow: 1px 2px 3px 1px black;
+                position: relative;
+
+                &:hover{
+                    box-shadow: 1px 2px 3px 1px gray;
+
+                    .delete-btn{
+                        display: block;
+                    }
+                }
+
+                .delete-btn{
+                    width: 20px;
+                    display: none;
+                    position: absolute;
+                    left: -20px;
+                    background-color: red;
+                    border: none;
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }
+
+            .plus{
+                border-right: 5px solid green;
+            }
+            .minus{
+                border-right: 5px solid red;
+            }
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+
+            label{
+                text-transform: uppercase;
+            }
+            input {
+                min-width: 100%;
+                padding: 5px;
+                margin-bottom: 10px;
+                transition: 0.3s;
+                color: black;
+
+                &:focus{
+                    outline: none;
+                    border: none;
+                    border-bottom: 1px solid black;
+                    background-color: $color ;   
+                }
+            }
+            .btn{
+                width: 100%;
+                color: red;
+                padding: 5px;
+                border-radius: 5px;
+                border: none;
+                transition: .3s;
+                font-size: 18px;
+
+                &:hover{
+                    box-shadow: 1px 2px 2px 0 black;
+                    color: green;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
